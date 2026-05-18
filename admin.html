@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin – Scholarship Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-brand">
+    <div class="nav-logo-icon">🎓</div>
+    <h2>Scholarship Portal</h2>
+  </div>
+  <button class="hamburger" id="ham" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-menu" id="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="register.html">Register</a></li>
+    <li><a href="search.html">Search</a></li>
+    <li><a href="view_scholarships.html">Scholarships</a></li>
+    <li><a href="admin.html" class="active">Admin</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <h1>Admin Dashboard</h1>
+  <p>Manage scholarship listings and student data from one place.</p>
+</div>
+
+<div class="section">
+  <span class="section-label">Quick Actions</span>
+  <div class="admin-grid">
+    <div class="admin-action">
+      <div class="admin-icon">➕</div>
+      <h3>Add Scholarship</h3>
+      <p>Post a new scholarship listing for students to discover.</p>
+    </div>
+    <div class="admin-action">
+      <div class="admin-icon">✏️</div>
+      <h3>Edit Scholarship</h3>
+      <p>Update details, deadlines, or eligibility for existing scholarships.</p>
+    </div>
+    <div class="admin-action danger">
+      <div class="admin-icon">🗑️</div>
+      <h3>Delete Scholarship</h3>
+      <p>Permanently remove a scholarship listing from the portal.</p>
+    </div>
+    <div class="admin-action">
+      <div class="admin-icon">👥</div>
+      <h3>View Registrations</h3>
+      <p>See all student registrations and manage applications.</p>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <p>© 2026 <strong>Scholarship Portal</strong> · Designed by Amna Tahir</p>
+</footer>
+
+<script>
+  const ham = document.getElementById('ham');
+  const menu = document.getElementById('menu');
+  ham.addEventListener('click', () => { ham.classList.toggle('open'); menu.classList.toggle('open'); });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { ham.classList.remove('open'); menu.classList.remove('open'); }));
+</script>
+</body>
+</html>

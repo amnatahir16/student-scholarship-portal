@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search – Scholarship Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-brand">
+    <div class="nav-logo-icon">🎓</div>
+    <h2>Scholarship Portal</h2>
+  </div>
+  <button class="hamburger" id="ham" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-menu" id="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="register.html">Register</a></li>
+    <li><a href="search.html" class="active">Search</a></li>
+    <li><a href="view_scholarships.html">Scholarships</a></li>
+    <li><a href="admin.html">Admin</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <h1>Find Your Scholarship</h1>
+  <p>Search from hundreds of opportunities across Pakistan and beyond.</p>
+</div>
+
+<div class="section">
+  <div class="search-box">
+    <div class="search-row">
+      <div class="input-wrap">
+        <span class="input-icon">🔍</span>
+        <input type="text" placeholder="e.g. Engineering, Merit, STEM…" id="searchInput">
+      </div>
+      <button class="btn-search" onclick="doSearch()">Search</button>
+    </div>
+    <div class="filter-chips">
+      <span class="chip active" onclick="toggleChip(this)">All</span>
+      <span class="chip" onclick="toggleChip(this)">Merit-Based</span>
+      <span class="chip" onclick="toggleChip(this)">Need-Based</span>
+      <span class="chip" onclick="toggleChip(this)">Sports</span>
+      <span class="chip" onclick="toggleChip(this)">STEM</span>
+      <span class="chip" onclick="toggleChip(this)">Arts</span>
+      <span class="chip" onclick="toggleChip(this)">International</span>
+    </div>
+  </div>
+
+  <div class="card-grid" style="margin-top:40px;" id="results">
+    <div class="card">
+      <div class="card-emoji">🏆</div>
+      <div class="card-body">
+        <h2>Merit Scholarship</h2>
+        <p>For top-performing students with outstanding academic records.</p>
+        <span class="tag">Merit-Based</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-emoji">🤝</div>
+      <div class="card-body">
+        <h2>Need-Based Grant</h2>
+        <p>Supporting financially deserving students across all disciplines.</p>
+        <span class="tag">Need-Based</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-emoji">⚽</div>
+      <div class="card-body">
+        <h2>Sports Excellence Award</h2>
+        <p>Recognizing student athletes who excel on and off the field.</p>
+        <span class="tag">Sports</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <p>© 2026 <strong>Scholarship Portal</strong> · Designed by Amna Tahir</p>
+</footer>
+
+<script>
+  const ham = document.getElementById('ham');
+  const menu = document.getElementById('menu');
+  ham.addEventListener('click', () => { ham.classList.toggle('open'); menu.classList.toggle('open'); });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { ham.classList.remove('open'); menu.classList.remove('open'); }));
+  function toggleChip(el) {
+    document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+    el.classList.add('active');
+  }
+  function doSearch() { /* hook up your backend here */ }
+</script>
+</body>
+</html>

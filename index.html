@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scholarship Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-brand">
+    <div class="nav-logo-icon">🎓</div>
+    <h2>Scholarship Portal</h2>
+  </div>
+  <button class="hamburger" id="ham" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-menu" id="menu">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="register.html">Register</a></li>
+    <li><a href="search.html">Search</a></li>
+    <li><a href="view_scholarships.html">Scholarships</a></li>
+    <li><a href="admin.html">Admin</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-badge">✦ Pakistan's #1 Scholarship Platform</div>
+  <h1>Your Future Starts<br>with the Right <span>Scholarship</span></h1>
+  <p>Explore hundreds of opportunities, register online, and get matched to scholarships that fit your goals.</p>
+  <div class="hero-actions">
+    <a href="register.html"><button class="btn-primary">🚀 Apply Now</button></a>
+    <a href="search.html"><button class="btn-outline">🔍 Browse Scholarships</button></a>
+  </div>
+</section>
+
+<div class="stats-strip">
+  <div class="stat-item"><strong>500+</strong><span>Scholarships</span></div>
+  <div class="stat-item"><strong>12K+</strong><span>Students Helped</span></div>
+  <div class="stat-item"><strong>98%</strong><span>Satisfaction Rate</span></div>
+  <div class="stat-item"><strong>Free</strong><span>Forever</span></div>
+</div>
+
+<div class="section">
+  <span class="section-label">Why choose us</span>
+  <h2 class="section-title">Everything You Need,<br>In One Place</h2>
+  <p class="section-subtitle">From discovery to application — we make the scholarship journey simple.</p>
+
+  <div class="features">
+    <div class="feature-card">
+      <div class="feature-icon">📝</div>
+      <h3>Easy Registration</h3>
+      <p>Register in under 2 minutes with a simple form. No paperwork, no hassle — just your basic info.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🔍</div>
+      <h3>Smart Search</h3>
+      <p>Filter by field of study, merit, financial need, or sports — and find the perfect match instantly.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">⚡</div>
+      <h3>Quick Access</h3>
+      <p>A lightning-fast, mobile-friendly portal so you can apply from anywhere, anytime.</p>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <p>© 2026 <strong>Scholarship Portal</strong> · Designed by Amna Tahir</p>
+</footer>
+
+<script>
+  const ham = document.getElementById('ham');
+  const menu = document.getElementById('menu');
+  ham.addEventListener('click', () => {
+    ham.classList.toggle('open');
+    menu.classList.toggle('open');
+  });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    ham.classList.remove('open');
+    menu.classList.remove('open');
+  }));
+</script>
+</body>
+</html>
